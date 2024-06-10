@@ -1,0 +1,21 @@
+{
+  "name": "products",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "products/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/products",
+        "main": "products/src/index.ts",
+        "tsConfig": "products/tsconfig.lib.json",
+        "assets": ["products/*.md"],
+        "generatePackageJson": true,
+        "format": ["cjs"]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "types": ["node"],
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bluebits/golbal-confiramtionlib": [
+        "golbal-confiramtionlib/src/index.ts"
+      ],
+      "@bluebits/orders": ["orders/src/index.ts"],
+      "@bluebits/products": ["products/src/index.ts"],
+      "@bluebits/ui": ["ui/src/index.ts"],
+      "@bluebits/users": ["users/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

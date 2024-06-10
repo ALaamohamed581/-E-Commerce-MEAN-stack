@@ -1,0 +1,62 @@
+<div class="admin-page">
+  <p-card header="Dash Board" subheader="Lates Updates">
+    <div class="grid">
+      <div class="col-3">
+        <p-card styleClass="d-orders">
+          <div class="d-item">
+            <div>
+              <i class="pi shop pi-shopping-cart"></i>
+              <br />
+              <span class="name">Orders</span>
+            </div>
+            <span class="number">123</span>
+          </div>
+        </p-card>
+      </div>
+      <div class="col-3">
+        <p-card styleClass="d-Products">
+          <div class="d-item">
+            <div>
+              <i class="pi shop pi-briefcase"></i>
+              <br />
+              <span class="name">Products</span>
+            </div>
+            <span class="number">123</span>
+          </div>
+        </p-card>
+      </div>
+      <div class="col-3">
+        <p-card styleClass="d-Users">
+          <div class="d-item">
+            <div>
+              <i class="pi shop pi-users"></i>
+              <br />
+              <span class="name">Users</span>
+            </div>
+            <span class="number">123</span>
+          </div>
+        </p-card>
+      </div>
+      <div class="col-3">
+        <p-card styleClass="d-Sales">
+          <div class="d-item">
+            <div>
+              <i class="pi shop pi-dollar"></i>
+              <br />
+              <span class="name">Sales</span>
+            </div>
+            <span class="number">{{ 120 | currency }}</span>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </p-card>
+</div>
+<div class="grid">
+  <div class="col-6 offset-6">
+    <div [chart]="pieChartlineChart">we</div>
+  </div>
+  <div class="col-6 offset-6">
+    <div [chart]="ordersCahrt">we</div>
+  </div>
+</div>

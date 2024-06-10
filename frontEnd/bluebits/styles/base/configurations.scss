@@ -1,0 +1,11 @@
+body,
+.p-component {
+  font-family: 'Open Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  @include reset-list;
+}

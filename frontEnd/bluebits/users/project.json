@@ -1,0 +1,21 @@
+{
+  "name": "users",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "users/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/users",
+        "main": "users/src/index.ts",
+        "tsConfig": "users/tsconfig.lib.json",
+        "assets": ["users/*.md"],
+        "generatePackageJson": true,
+        "format": ["cjs"]
+      }
+    }
+  }
+}

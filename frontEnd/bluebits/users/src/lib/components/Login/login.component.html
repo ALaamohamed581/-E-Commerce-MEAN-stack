@@ -1,0 +1,69 @@
+<div class="login-register">
+  <div class="login-register-panel">
+    <div class="grid">
+      <div class="col-6">
+        <img class="image" src="assets/002 login-photo.png" alt="" />
+      </div>
+      <div class="col-6 p-2 mt-6">
+        <h3>Welcome</h3>
+        <h2>Login Page</h2>
+        <form [formGroup]="LoginFormGroup">
+          <div class="grid m-4">
+            <div class="col-12">
+              <p-inputGroup>
+                <p-inputGroupAddon>
+                  <i class="pi pi-user"></i>
+                </p-inputGroupAddon>
+
+                <input pInputText placeholder="Email" formControlName="email" />
+              </p-inputGroup>
+              <small
+                *ngIf="loginForm.email.invalid && isSubmted"
+                class="text-danger"
+              >
+                <span style="color: red" *ngIf="loginForm.email.errors.email">
+                  Please Enter avalid Email
+                </span>
+                <span
+                  style="color: red"
+                  *ngIf="loginForm.email.errors.required"
+                >
+                  Email is required
+                </span>
+              </small>
+              <br />
+              <p-inputGroup>
+                <p-inputGroupAddon>
+                  <i class="pi pi-lock"></i>
+                </p-inputGroupAddon>
+                <input
+                  type="password"
+                  formControlName="password"
+                  placeholder="password"
+                />
+              </p-inputGroup>
+              <small
+                style="color: red"
+                *ngIf="loginForm.password.invalid && isSubmted"
+              >
+                password is required
+              </small>
+            </div>
+            <div class="col-12">
+              <p-button
+                styleClass="full-btn"
+                label="Submit"
+                (onClick)="onSubmit()"
+              ></p-button>
+            </div>
+            <div *ngIf="isSubmted && authError" class="col-12">
+              <span style="color: red; text-align: center">{{
+                authMessage
+              }}</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

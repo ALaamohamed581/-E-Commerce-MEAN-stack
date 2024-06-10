@@ -1,0 +1,45 @@
+.d-item {
+  display: flex;
+  text-align: center;
+  color: var(--surface-0);
+  justify-content: space-between;
+}
+.d-orders {
+  background-color: #ffe54b;
+  background-image: linear-gradient(147deg, #ffe54b 0%, #ff2525 74%);
+}
+.d-Products {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+.d-Users {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+.d-Sales {
+  background: rgb(4, 3, 9);
+  background: linear-gradient(
+    109deg,
+    rgba(4, 3, 9, 1) 0%,
+    rgba(45, 52, 60, 1) 72%
+  );
+}
+.shop {
+  font-size: 4em;
+  margin-bottom: 14px;
+}
+.name {
+  font-size: 1.4em;
+}
+.number {
+  font-size: 2em;
+}
