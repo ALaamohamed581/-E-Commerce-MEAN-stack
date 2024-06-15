@@ -4,9 +4,9 @@ const { OrderItem } = require('../models/order-item');
 const { Product } = require('../models/product');
 const path = require('path');
 const router = express.Router();
-const stripe = require('stripe')(
-    'sk_test_51PQzYsAeDMk9ovRaZd26FghchSru7BY0dkcnzsND3qy8W4bEMdy26CqFdxJu9jOWNhWvxRMLDaUGIpVy7qlTLvUZ00wdaBrLic'
-);
+const stripe =
+    require('stripe')();
+    //'enter Your stripe key as a string here'
 router.get('/orderi', async (req, res, next) => {
     const all = await OrderItem.find().populate('product');
     res.status(200).json({ data: all });
