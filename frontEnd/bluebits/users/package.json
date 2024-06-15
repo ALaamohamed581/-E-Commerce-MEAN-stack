@@ -1,0 +1,10 @@
+{
+  "name": "@bluebits/users",
+  "version": "0.0.1",
+  "dependencies": {
+    "ngrx": "^0.0.1-security"
+  },
+  "type": "commonjs",
+  "main": "./index.cjs",
+  "private": true
+}

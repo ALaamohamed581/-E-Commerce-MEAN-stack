@@ -1,0 +1,6 @@
+.cart-page {
+  min-height: 15rem;
+}
+.cart-page .cart-shipping {
+  color: var(--green-700);
+}/*# sourceMappingURL=cart.css.map */

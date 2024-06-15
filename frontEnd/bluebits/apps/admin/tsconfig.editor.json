@@ -1,0 +1,15 @@
+{
+
+
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "../../enviroment.ts/enviroment.ts",
+    "../../orders/src/serivces/orders-service.service.spec.ts",
+    "../../orders/src/serivces/orders-service.service.ts"
+  ],
+  "compilerOptions": {},
+  "exclude": ["jest.config.ts", "src/**/*.test.ts", "src/**/*.spec.ts",  "node_modules"]
+
+
+}

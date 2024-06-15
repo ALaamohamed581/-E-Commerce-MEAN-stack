@@ -1,0 +1,14 @@
+.nav {
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1.5rem;
+    a {
+      color: var(--surface-500);
+      &:hover {
+        color: $primary_color;
+        cursor: pointer;
+      }
+    }
+  }
+}

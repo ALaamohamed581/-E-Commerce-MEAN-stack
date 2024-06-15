@@ -1,0 +1,175 @@
+@import 'normalize.css/normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import 'primeicons/primeicons.css';
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.css';
+@import 'node_modules/primeflex/primeflex.css';
+@import 'quill/dist/quill.core.css';
+@import 'quill/dist/quill.snow.css';
+body,
+.p-component {
+  font-family: "Open Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.admin-wrapper {
+  height: 100;
+  padding: 0;
+  margin: 0;
+}
+.admin-content {
+  width: calc(100% - 175px);
+  margin-left: 175px;
+}
+.admin-sidebar {
+  position: fixed;
+  width: 175px;
+  top: 0;
+  background-color: #0a1d31;
+  height: 100%;
+}
+.admin-page {
+  padding: 15px;
+}
+
+.logo {
+  padding: 20px;
+  width: 100%;
+}
+.logo img {
+  max-width: 100%;
+}
+
+.links ul {
+  margin: 0;
+  padding: 0;
+}
+.links ul li {
+  display: block;
+  list-style: none;
+  width: 100%;
+}
+.links ul li a {
+  color: var(--surface-a);
+  padding: 10px 15px;
+  display: block;
+}
+.links ul li a:hover {
+  background-color: var(--blue-700);
+}
+.links ul li a i {
+  margin-right: 8px;
+  margin-top: 0px;
+}
+.links ul li a.logOut {
+  color: var(--blue-500);
+}
+
+.d-item {
+  display: flex;
+  text-align: center;
+  color: var(--surface-0);
+  justify-content: space-between;
+}
+
+.d-orders {
+  background-color: #ffe54b;
+  background-image: linear-gradient(147deg, #ffe54b 0%, #ff2525 74%);
+}
+
+.d-Products {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
+}
+
+.d-Users {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+}
+
+.d-Sales {
+  background: rgb(4, 3, 9);
+  background: linear-gradient(109deg, rgb(4, 3, 9) 0%, rgb(45, 52, 60) 72%);
+}
+
+.shop {
+  font-size: 4em;
+  margin-bottom: 14px;
+}
+
+.name {
+  font-size: 1.4em;
+}
+
+.number {
+  font-size: 2em;
+}
+
+.login-register {
+  background-image: linear-gradient(236deg, #565867, #191a25);
+  height: 100vh;
+  background-color: black;
+}
+.login-register-panel {
+  width: 650px;
+  height: 500px;
+  background-color: var(--surface-a);
+  position: absolute;
+  left: calc(50% - 325px);
+  top: calc(50% - 250px);
+}
+
+.full-btn {
+  width: 100%;
+}
+
+.image {
+  height: 500px;
+}
+
+.banner {
+  height: 280px;
+  width: 100%;
+  background-color: #d7effb;
+  border-radius: 15px;
+}
+.banner-text {
+  color: var(--surface-700);
+}
+.banner-image {
+  padding: 15px 15px 0 0;
+  text-align: right;
+}
+.banner-button {
+  background-color: var(--surface-0);
+  color: #ff3a00;
+  border: none;
+  height: 50px;
+}
+.banner-button:enabled:hover {
+  background-color: var(--surface-100);
+  color: #ff3a00;
+}
+.banner h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.banner h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.header {
+  padding: 2rem;
+}/*# sourceMappingURL=admin.css.map */

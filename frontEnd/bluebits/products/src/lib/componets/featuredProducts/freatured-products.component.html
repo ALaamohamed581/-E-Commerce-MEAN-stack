@@ -1,0 +1,11 @@
+<div class="featured-Products">
+  <h3>Featured Products</h3>
+  <div class="grid">
+    @for( product of featruedproducts ;track product.id){
+
+    <div class="col-3">
+      <product-item [product]="product"></product-item>
+    </div>
+    }
+  </div>
+</div>

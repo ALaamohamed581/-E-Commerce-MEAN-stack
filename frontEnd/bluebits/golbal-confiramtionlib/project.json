@@ -1,0 +1,19 @@
+{
+  "name": "golbal-confiramtionlib",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "golbal-confiramtionlib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/golbal-confiramtionlib",
+        "main": "golbal-confiramtionlib/src/index.ts",
+        "tsConfig": "golbal-confiramtionlib/tsconfig.lib.json",
+        "assets": ["golbal-confiramtionlib/*.md"]
+      }
+    }
+  }
+}

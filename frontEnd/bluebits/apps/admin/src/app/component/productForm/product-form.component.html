@@ -1,0 +1,171 @@
+<div class="admin-page">
+  <p-card
+    [header]="editMode === true ? 'Edit Product' : 'Create Product'"
+    subheader="You can  create or edit Products here"
+  >
+    <div class="p-grid">
+      <div class="p-col-12">
+        <p-toolbar>
+          <div class="p-toolbar-group-left"></div>
+          <div class="p-toolbar-group-left">
+            <p-button
+              styleClass="p-button-info"
+              [label]="editMode === true ? 'Update' : 'Create'"
+              icon="pi pi-plus"
+              class="mr-2"
+              (onClick)="onSubmit()"
+            />
+            <p-button
+              routerLink="/products"
+              styleClass="p-button-secondary"
+              label="Cancel"
+              icon="pi pi-arrow-circle-left"
+              class="mr-2"
+            /></div
+        ></p-toolbar>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-12">
+        <p-toast></p-toast>
+        <form class="mt-5" [formGroup]="form">
+          <div class="form grid grid">
+            <div class="field col">
+              <label for="firstname2">Name</label>
+              <input
+                id="firstname2"
+                type="text"
+                formControlName="name"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+              />
+              <small
+                *ngIf="form.controls['name'].invalid && isSubbmuted"
+                class="p-error"
+                >Name is required
+              </small>
+            </div>
+            <div class="field col">
+              <label for="Brand">Brand</label>
+              <input
+                id="lastname2"
+                type="text"
+                formControlName="brand"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+              />
+              <small
+                *ngIf="form.controls['brand'].invalid && isSubbmuted"
+                class="p-error"
+                >Brand is required
+              </small>
+            </div>
+            <div class="field col">
+              <label for="price">price</label>
+              <br />
+
+              <p-inputNumber
+                formControlName="price"
+                mode="decimal"
+                inputId="withoutgrouping"
+                [useGrouping]="false"
+              />
+              <small
+                *ngIf="form.controls['price'].invalid && isSubbmuted"
+                class="p-error"
+                >price is required
+              </small>
+            </div>
+          </div>
+          <div class="grid">
+            <div class="field col-4">
+              <label for="countInStock">countInStock</label>
+              <br />
+
+              <p-inputNumber
+                formControlName="countInStock"
+                mode="decimal"
+                inputId="withoutgrouping"
+                [useGrouping]="false"
+              />
+              <small
+                *ngIf="form.controls['countInStock'].invalid && isSubbmuted"
+                class="p-error"
+                >countInStock is required
+              </small>
+            </div>
+            <div class="field col-4">
+              <label for="category">category</label>
+              <br />
+              <p-dropdown
+                formControlName="category"
+                [options]="categoriesNames"
+                [filter]="true"
+                [showClear]="true"
+                optionLabel="name"
+                optionValue="id"
+                placeholder="Selcet a Category"
+              ></p-dropdown>
+
+              <!-- <small
+                *ngIf="form.controls['category'].invalid && isSubbmuted"
+                class="p-error"
+                >category is required
+              </small> -->
+            </div>
+            <div class="field col-4">
+              <label for="isFeatured">isFeatured</label>
+              <br />
+              <p-inputSwitch formControlName="isFeatured"></p-inputSwitch>
+            </div>
+            <div class="field col-8">
+              <label for="description">Description</label>
+
+              <br />
+              <textarea
+                formControlName="description"
+                [rows]="5"
+                [cols]="120"
+              ></textarea>
+              <small
+                *ngIf="form.controls['description'].invalid && isSubbmuted"
+                class="p-error"
+                >description is required
+              </small>
+            </div>
+            <div class="field col-12">
+              <label>Main Image</label>
+              <input
+                class="p-inputtext col-12"
+                type="file"
+                accept="image/*"
+                (change)="OnImageUpload($event)"
+              />
+              <small
+                *ngIf="form.controls['image'].invalid && isSubbmuted"
+                class="p-error"
+                >image is required
+              </small>
+              <div class="col-2">
+                <img [src]="imgDisplay" style="width: 5rem; height: 5rem" />
+              </div>
+            </div>
+
+            <div class="field col-12">
+              <label for="richDescription">Rich Description</label>
+
+              <br />
+              <p-editor
+                formControlName="richDescription"
+                [style]="{ height: '320px' }"
+              />
+              <small
+                *ngIf="form.controls['richDescription'].invalid && isSubbmuted"
+                class="p-error"
+                >description is required
+              </small>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </p-card>
+</div>

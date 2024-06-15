@@ -1,0 +1,72 @@
+<div class="admin-page">
+  <p-card
+    [header]="editMode === true ? 'Edit category' : 'Create Category'"
+    subheader="You can  create or edit categories here"
+  >
+    <div class="p-grid">
+      <div class="p-col-12">
+        <p-toolbar>
+          <div class="p-toolbar-group-left"></div>
+          <div class="p-toolbar-group-left">
+            <p-button
+              styleClass="p-button-info"
+              [label]="editMode === true ? 'Update' : 'Create'"
+              icon="pi pi-plus"
+              class="mr-2"
+              (onClick)="editMode === true ? UpdateData() : Onsubmit()"
+            />
+            <p-button
+              routerLink="/categories"
+              styleClass="p-button-secondary"
+              label="Cancel"
+              icon="pi pi-arrow-circle-left"
+              class="mr-2"
+            /></div
+        ></p-toolbar>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-12">
+        <p-toast></p-toast>
+        <form class="mt-5" [formGroup]="form">
+          <div class="form grid grid">
+            <div class="field col">
+              <label for="firstname2">Name</label>
+              <input
+                id="firstname2"
+                type="text"
+                formControlName="name"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+              />
+              <small
+                *ngIf="form.controls['name'].invalid && isSubbmuted"
+                class="p-error"
+                >Name is required
+              </small>
+            </div>
+            <div class="field col">
+              <label for="lastname2">Icon</label>
+              <input
+                id="lastname2"
+                type="text"
+                formControlName="Icon"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+              />
+              <small
+                *ngIf="form.controls['Icon'].invalid && isSubbmuted"
+                class="p-error"
+                >Icon is required
+              </small>
+            </div>
+            <div class="p-field p-col">
+              <label for="Color"></label>
+              <br />
+              <br />
+              <p-colorPicker formControlName="color"></p-colorPicker>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </p-card>
+</div>

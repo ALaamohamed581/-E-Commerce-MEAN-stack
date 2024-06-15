@@ -1,0 +1,37 @@
+@import 'normalize.css/normalize.css';
+
+@import './base/colors.scss';
+@import './base/fonts.scss';
+@import './base/mixins.scss';
+
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.css';
+@import './base/configurations.scss';
+@import 'node_modules/primeflex/primeflex.css'; // sh;ared components
+@import './apps/shop/components/header.scss';
+@import './apps/shop/components/footer.scss';
+//dynmic
+@import './apps/shop/components/home.scss';
+@import './apps/shop/components/productlist.scss';
+@import './apps/shop/components/productDetails.scss';
+//libs
+@import './libs/ui/users.scss';
+
+@import './libs/ui/checkout.scss';
+@import './libs//ui/order-summary.scss';
+@import './libs/ui/cart.scss';
+@import 'node_modules/animate.css/animate.css';
+@import './libs/ui/products.scss';
+@import './libs/ui/productItem.scss';
+@import './libs/ui/categoriesbanner.scss';
+@import 'node_modules/primeflex/primeflex.css'; // sh;ared components
+@import 'primeicons/primeicons.css';
+@import './apps//shop/components/nav.scss';
+@import './libs/ui/ui.scss';
+@import './libs/ui/galley.scss';
+.contaier {
+  width: 80rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+  background-color: var(--surface-100);
+}

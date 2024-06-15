@@ -1,0 +1,21 @@
+<div class="gallery">
+  <div class="main-image">
+    <div *ngIf="!selctedImage; else other_content">
+      <p-progressSpinner aria-label="Loading"></p-progressSpinner>
+    </div>
+    <ng-template #other_content>
+      <img [src]="selctedImage" alt="" />
+    </ng-template>
+
+    <div class="images">
+      <ul>
+        @for( img of images ; track img){
+        <li
+          (click)="changeSelectedImage(img)"
+          [ngStyle]="{ 'background-image': 'url(' + img + ')' }"
+        ></li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>
