@@ -51,9 +51,10 @@ export class ordersService {
         orderItem
       )
       .pipe(
-        switchMap((session) => {
+        switchMap((session: any) => {
+          const { id } = session;
           return this.striepService.redirectToCheckout({
-            sessionId: JSON.stringify(session),
+            sessionId: id,
           });
         })
       );
@@ -64,10 +65,10 @@ export class ordersService {
   retirveOrderData(): orderModal {
     const data = localStorage.getItem('orderData');
 
-    const dataJson = JSON.parse(data || '{}');
+    const dataJson = JSON.parse(data ?? '{}');
     return dataJson;
   }
   removeCachedOrderData() {
-    JSON.parse(localStorage.getItem('orderData') || '');
+    JSON.parse(localStorage.getItem('orderData') ?? '');
   }
 }

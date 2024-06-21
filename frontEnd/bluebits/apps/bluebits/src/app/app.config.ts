@@ -15,7 +15,9 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideHttpClient(withFetch()),
     provideStore({}),
-    provideNgxStripe(),
-    /*enter your stripe key*/
+    provideNgxStripe(
+      /*enter your publised stripe key here*/
+    ),
+   
   ],
 };
