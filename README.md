@@ -1,4 +1,0 @@
-!! importent 
-this a projects made using NX so to statr it 
-NX serve admin //the first app
-nx serve bluebits //the seconde app 
