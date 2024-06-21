@@ -64,12 +64,13 @@ export class CheckoutPageComponent implements OnInit {
 
   private _getCartItems() {
     const cart: Cart = this.cartService.getCart();
-    this.orderItems = cart.items?.map((item: cartItem) => {
+    this.orderItems = cart.items?.map((item: any) => {
       return {
-        product: item.product,
+        product: item.productId,
         quantity: item.quantity,
       };
     });
+    console.log(cart.items, 'all the caret');
   }
 
   private _getCountries() {

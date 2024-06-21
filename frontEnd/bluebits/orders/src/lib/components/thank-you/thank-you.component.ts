@@ -17,6 +17,8 @@ export class ThankYouComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     const data = this.ordersService.retirveOrderData();
+
+    console.log(data, 'the data');
     this.ordersService.createOrder(data).subscribe(() => {
       this.cartService.emptyCart();
       this.ordersService.removeCachedOrderData();
