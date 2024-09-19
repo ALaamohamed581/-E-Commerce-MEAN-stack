@@ -41,7 +41,8 @@ git clone https://github.com/yourusername/ecommerce-app.git
    ```
 3. **Run the Development Server:**
    ```bash
-   npm start
+   nX serve admin //the first app
+   nx serve bluebits //the seconde app
    ```
 
 ### Backend Setup
