@@ -1,6 +1,6 @@
 !! importent 
 this a project made using NX so to run  it 
--NX serve admin  
--NX serve bluebits 
+ NX serve admin  
+ NX serve bluebits 
 
 if while installing u face any troubles we could install nx-cli first then continue installation process
