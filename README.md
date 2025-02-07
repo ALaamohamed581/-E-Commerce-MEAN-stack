@@ -59,11 +59,4 @@ git clone https://github.com/yourusername/ecommerce-app.git
    npm start
    ```
 
-## Live Preview
-You can try out the live version of the app here: [Live Preview](#)
-
-## Contributing
-Feel free to submit issues and pull requests. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+ 
